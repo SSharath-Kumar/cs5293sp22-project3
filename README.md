@@ -14,7 +14,7 @@
 - Assuming that the unredactor.tsv file has bad lines or corrupted data, such lines are skipped while reading the file
 - Given the limited dataset and the quality of the data, the accuracy of the model is very low.
 
-**Note:** Validation data/records are not being used as RandomForestClassifier is used for training and prediction. The model is not improved upon. 
+**Note:** Validation data/records are not being used as RandomForestClassifier is used for training and prediction. Also, the model is not saved or improved upon. 
 
 ## Functionality
 
@@ -65,7 +65,9 @@ This vectorizer is then used to vectorize the sentences from the training datafr
 The first 10 names from the prediction are then copied to an array and printed on the console.
 The predictions and actual names from the testing data are compared to acquire the precision, recall, f1 scores and returned as output. 
 
-The main method calls the above functions in a sequence and the resultant scores are printed on the console as output.
+----
+
+All the above functions are called in a sequence and the resultant scores are printed on the console as output.
 
 ## Test Cases
 
@@ -84,6 +86,8 @@ This test case runs the complete project (sequentially calls all the functions),
 
 
 ## Steps for local deployment
+
+Project was run on an *e2-micro* instance
 
 Clone the repository using the command 
 
