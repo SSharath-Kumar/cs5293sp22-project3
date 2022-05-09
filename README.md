@@ -8,6 +8,8 @@
 - nltk
 - sklearn
 
+### Model used - **_RandomForestClassifier_**
+
 ## Assumptions
 
 - Application must be run on a machine with internet connectivity. Core functionality is dependent on fetching data from the git repository.
@@ -69,6 +71,7 @@ The predictions and actual names from the testing data are compared to acquire t
 
 All the above functions are called in a sequence and the resultant scores are printed on the console as output.
 
+
 ## Test Cases
 
 **_test_fetch_data_**
@@ -84,7 +87,7 @@ The dataframes returned are checked if they contain data or not.
 
 This test case runs the complete project (sequentially calls all the functions), then checks if the scores returned as outputs are less than 1 or not. 
 
-
+----
 ## Steps for local deployment
 
 Project was run on an *e2-micro* instance
@@ -108,3 +111,10 @@ The project is run using the command
 Test cases can be run using the below command
 
 `pipenv run python -m pytest`
+
+----
+##Addendum
+
+- MultinomialNB was also implemented but as the scores were inconsistent or wrong, it was not used for the project
+- The RandomForestClassifier initially provided lower accuracy scores but upon trying various max depth options (10, 20 .. 90) helped to improve the scores.
+- For feature extraction, CountVectorizer was also implemented but using TF-IDF vectorizer with n-grams has provided better results.
