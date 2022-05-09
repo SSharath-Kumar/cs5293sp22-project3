@@ -15,6 +15,7 @@
 - Application must be run on a machine with internet connectivity. Core functionality is dependent on fetching data from the git repository.
 - Assuming that the unredactor.tsv file has bad lines or corrupted data, such lines are skipped while reading the file
 - Given the limited dataset and the quality of the data, the accuracy of the model is very low.
+- Only few of the data errors are handled and bad data from the unredactor.tsv file can cause errors, stopping the application.
 
 **Note:** Validation data/records are not being used as RandomForestClassifier is used for training and prediction. Also, the model is not saved or improved upon. 
 
@@ -117,4 +118,6 @@ Test cases can be run using the below command
 
 - MultinomialNB was also implemented but as the scores were inconsistent or wrong, it was not used for the project
 - The RandomForestClassifier initially provided lower accuracy scores but upon trying various max depth options (10, 20 .. 90) helped to improve the scores.
+- Max Depth at 90 provided better accuracy but was killing the GCP instance. You can increase your instance size, update line 63 on unredactor.py and run the application.
 - For feature extraction, CountVectorizer was also implemented but using TF-IDF vectorizer with n-grams has provided better results.
+
