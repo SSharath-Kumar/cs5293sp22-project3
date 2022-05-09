@@ -118,6 +118,7 @@ Test cases can be run using the below command
 
 - MultinomialNB was also implemented but as the scores were inconsistent or wrong, it was not used for the project
 - The RandomForestClassifier initially provided lower accuracy scores but upon trying various max depth options (10, 20 .. 90) helped to improve the scores.
+- The application currently has the max depth of the RandomForestClassifier set at 70 to run on the standard *E2-MICRO* instance
 - Max Depth at 90 provided better accuracy but was killing the GCP instance. You can increase your instance size, update line 63 on unredactor.py and run the application.
 - For feature extraction, CountVectorizer was also implemented but using TF-IDF vectorizer with n-grams has provided better results.
 
