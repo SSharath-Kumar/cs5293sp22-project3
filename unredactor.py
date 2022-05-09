@@ -60,7 +60,7 @@ def train_and_predict(train_df, test_df):
     y_train = train_df['Name']
 
     # Initialize and train the model
-    clf = RandomForestClassifier(max_depth=90)
+    clf = RandomForestClassifier(max_depth=70)
     clf.fit(x_train, y_train)
 
     # Create a vectorizer using previous vectorizer's vocabulary
